@@ -290,6 +290,19 @@ textarea {
     }
 }
 
+ .menu-inst{    
+   font-size: 20px;    
+   font-family: -apple-system,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;   
+   text-align: center;   
+   display: block;   
+   margin: 30px 0;   
+ }   
+
+ .btn-main{    
+   padding: 30px 0;  
+   font-size: 26px;  
+ } 
+
 .toolbar {
     font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
 }
@@ -310,4 +323,8 @@ textarea {
   display: block;
   text-align: center;
   margin: 10px 0;
+}
+
+.toolbar {
+    background-image: -webkit-linear-gradient(bottom,#d1be16,#d1be16 50%,transparent 50%);
 }
