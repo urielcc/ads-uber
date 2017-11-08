@@ -319,6 +319,10 @@ textarea {
   color: #000;
 }
 
+.icon-menu i{
+  color: #2b2b2b;
+}
+
 .icon-menu i, .icon-menu span{
   display: block;
   text-align: center;
@@ -327,4 +331,13 @@ textarea {
 
 .toolbar {
     background-image: -webkit-linear-gradient(bottom,#d1be16,#d1be16 50%,transparent 50%);
+}
+
+.form-register{
+  padding: 10px 40px;
+}
+
+.form-register input, .form-register select{
+  width: 100%;
+  margin: 10px 0;
 }

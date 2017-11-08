@@ -26,28 +26,38 @@
         <div class="toolbar">
             <div class="toolbar__left">
             <span class="toolbar-button">
-                <a href="../index.html" style="text-decoration: none;color: #0076ff;">
+                <a href="login.html" style="text-decoration: none;color: #0076ff;">
               <i class="fa fa-chevron-left" aria-hidden="true"></i> Regresar
               </a>
             </span>
           </div>
 
-          <div class="toolbar__center">Ingresar Conductor</div>
+          <div class="toolbar__center">Registro Conductor</div>
         </div>
 
-         <div class="login-form">
+        <div class="container form-register">
+            <input type="text" class="text-input text-input--underbar" placeholder="Nombre" value="">
+            <input type="text" class="text-input text-input--underbar" placeholder="Correo Electronico" value="">
+            <input type="password" class="text-input text-input--underbar" placeholder="Contraseña" value="">
+            <input type="password" class="text-input text-input--underbar" placeholder="Confirmar contraseña" value="">
+            <input type="text" class="text-input text-input--underbar" placeholder="Teléfono" value="">
+            <input type="text" class="text-input text-input--underbar" placeholder="Marca Carro" value="">
+            <input type="text" class="text-input text-input--underbar" placeholder="Modelo Carro" value="">
+            <input type="text" class="text-input text-input--underbar" placeholder="Color Carro" value="">
+            <input type="text" class="text-input text-input--underbar" placeholder="Número de Placas" value="">
+            <select class="select-input select-input--material">
+              <option>Número Pasajeros</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+        </div>
 
-            <div class="container form-register">
-        <input type="email" class="text-input--underbar" placeholder="Correo Electrónico" value="">
-        <br>
-        <input type="password" class="text-input--underbar" placeholder="Contraseña" value="">
-        </div>
-        <br><br>
-        <a href="menu.html" class="button--large--cta" style="width: 95%; margin: 0 auto;">Ingresar</a>
-        <br><br>
-        <a href="registro.html" class="button--large--quiet" style="width: 95%; margin: 0 auto;">¿No tienes cuenta? Registrate</a>
-        </div>
-       
+        <a href="menu.html" class="button--large--cta" style="width: 95%; margin: 0 auto;">Registrarse</a>
 
         <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
         <script src="../js/vendor/jquery-3.2.1.min.js"></script>
