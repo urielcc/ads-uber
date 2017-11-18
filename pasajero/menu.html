@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="../plugins/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="../plugins/onsenui/css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="toolbar">
+          <div class="toolbar__center">Menú Conductor</div>
+        </div>
+        <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="iniciar-viaje.html" class="icon-menu">
+                    <i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+                    <span>Iniciar Viaje</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="planear-ruta.html" class="icon-menu">
+                    <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
+                    <span>Planear Viaje</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="ver-viajes-reservados.html" class="icon-menu">
+                    <i class="fa fa-eye fa-3x" aria-hidden="true"></i>
+                    <span>Viajes Reservados</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="configuraciones.html" class="icon-menu">
+                    <i class="fa fa-cog fa-3x" aria-hidden="true"></i>
+                    <span>Configuraciones</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a onclick="mostrarElemento('alertaCierraSesion');" class="icon-menu">
+                    <i class="fa fa-sign-out fa-3x" aria-hidden="true"></i>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <div id="alertaCierraSesion" style="display: none;">
+            <div class="alert-dialog-mask"></div>
+            <div class="alert-dialog">
+              <div class="alert-dialog-container">
+                <div class="alert-dialog-title">Confirmacion</div>
+
+                <div class="alert-dialog-content">
+                  Seguro que quiere salir?
+                </div>
+
+                <div class="alert-dialog-footer alert-dialog-footer--rowfooter">
+                  <button onclick="redirecciona('../index.html')" class="alert-dialog-button alert-dialog-button--rowfooter">Si</button>
+                  <button onclick="ocultaElemento('alertaCierraSesion');" class="alert-dialog-button alert-dialog-button--primal alert-dialog-button--rowfooter">No</button>
+                </div>
+              </div>
+            </div> 
+        </div>
+
+        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
+        <script src="../js/vendor/jquery-3.2.1.min.js"></script>
+
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>        
+    </body>
+</html>
