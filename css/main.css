@@ -341,3 +341,22 @@ textarea {
   width: 100%;
   margin: 10px 0;
 }
+
+#search-wrapper{
+  position: relative;
+}
+
+#search-input{
+  position: absolute;
+    top: 35px;
+    z-index: 999;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#map-suggest{
+      width: 100%;
+    font-size: 20px;
+    padding: 10px 10px;    
+    border: 1px solid #cccccc;
+}

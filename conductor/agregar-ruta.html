@@ -24,48 +24,40 @@
 
         <!-- Add your site or application content here -->
         <div class="toolbar">
-          <div class="toolbar__center">Menú Conductor</div>
+            <div class="toolbar__left">
+            <span class="toolbar-button">
+                <a href="menu.html" style="text-decoration: none;color: #0076ff;">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i> Regresar
+              </a>
+            </span>
+          </div>
+
+          <div class="toolbar__center">Agregar Ruta</div>
         </div>
 
-        <div class="container">
-        <div class="row">
-            <div class="col-xs-4">
-                <a href="agregar-ruta.html" class="icon-menu">
-                    <i class="fa fa-map fa-3x" aria-hidden="true"></i>
-                    <span>Agregar ruta</span>
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="seleccionar-ruta.html" class="icon-menu">
-                    <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
-                    <span>Planear</span>
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="#" class="icon-menu">
-                    <i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
-                    <span>Iniciar</span>
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="configuraciones.html" class="icon-menu">
-                    <i class="fa fa-cog fa-3x" aria-hidden="true"></i>
-                    <span>Configuraciones</span>
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="../index.html" class="icon-menu">
-                    <i class="fa fa-sign-out fa-3x" aria-hidden="true"></i>
-                    <span>Cerrar Sesión</span>
-                </a>
+        <div id="search-wrapper">
+            <div id="search-input">
+                <input id="map-suggest" type="text" class="form-control" placeholder="Buscar Dirección...">
             </div>
         </div>
+
+        <div id="map-container" style="width:100%; height:100%;"></div>
+        
+        <div id="confirm-msg" style="display:none;">
+        <div class="action-sheet-mask"></div>
+        <div class="action-sheet">
+          <div class="action-sheet-title">¿La ruta indicada es correcta?</div>
+          <button onclick="window.location.href = 'menu.html';" class="action-sheet-button">Aceptar</button>
+          <button id="cancel-route" class="action-sheet-button">Cancelar</button>
         </div>
+        </div>
+       
 
         <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
         <script src="../js/vendor/jquery-3.2.1.min.js"></script>
-
+        <script src="https://maps.google.com/maps/api/js?v=3.exp&libraries=places"></script>
         <script src="../js/plugins.js"></script>
+        <script src="../js/agregar-ruta.js"></script>
         <script src="../js/main.js"></script>        
     </body>
 </html>
