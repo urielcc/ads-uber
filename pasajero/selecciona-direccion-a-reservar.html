@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="../plugins/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="../plugins/onsenui/css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="toolbar">
+          <div class="toolbar__left">
+            <span class="toolbar-button">
+                <a href="planear-ruta.html" style="text-decoration: none;color: #0076ff;">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i> Regresar
+              </a>
+            </span>
+          </div>
+
+          <div class="toolbar__center" style="font-family: -apple-system,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;">
+            Selecciona direccion
+          </div>
+
+          <div class="toolbar__right">
+            <button class="toolbar-button toolbar-button--outline" style="font-size: 10px;">
+              Nueva Direccion
+            </button>
+          </div>
+        </div>
+        <h3 class="list-title list-title--material">Direcciones Recientes</h3>
+        <ul class="list">
+          <li class="list-item list-item--tappable">
+            <div class="list-item__left">
+              <label class="radio-button">
+                <input type="radio" id="r1" class="radio-button__input" name="r" checked="checked">
+                <div class="radio-button__checkmark"></div>
+              </label>
+            </div>
+            <label for="r1" class="list-item__center">
+              Blvd. Circuito Siglo XXI #1974
+            </label>
+          </li>
+          <li class="list-item list-item--tappable">
+            <div class="list-item__left">
+              <label class="radio-button">
+                <input type="radio" id="r2" class="radio-button__input" name="r">
+                <div class="radio-button__checkmark"></div>
+              </label>
+            </div>
+            <label for="r2" class="list-item__center">
+              Carretera Central #10700
+            </label>
+          </li>
+          <li class="list-item list-item--tappable">
+            <div class="list-item__left">
+              <label class="radio-button">
+                <input type="radio" id="r3" class="radio-button__input" name="r">
+                <div class="radio-button__checkmark"></div>
+              </label>
+            </div>
+            <label for="r3" class="list-item__center">
+              Avenida Lazaro Cardenas #1163
+            </label>
+          </li>
+          <li class="list-item list-item--tappable">
+            <div class="list-item__left">
+              <label class="radio-button">
+                <input type="radio" id="r4" class="radio-button__input" name="r">
+                <div class="radio-button__checkmark"></div>
+              </label>
+            </div>
+            <label for="r4" class="list-item__center">
+              Prolongacion Paseo de Los Heroes #11951-1
+            </label>
+          </li>
+          <li class="list-item list-item--tappable">
+            <div class="list-item__left">
+              <label class="radio-button">
+                <input type="radio" id="r5" class="radio-button__input" name="r">
+                <div class="radio-button__checkmark"></div>
+              </label>
+            </div>
+            <label for="r5" class="list-item__center">
+              Miguel Aleman #1209
+            </label>
+          </li>
+        </ul>
+        <hr>
+        <button onclick="window.location.href = 'selecciona-viaje-disponibles.html';" class="button--large--cta" style="width: 95%; margin: 0 auto;">Aceptar</button>
+        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
+        <script src="../js/vendor/jquery-3.2.1.min.js"></script>
+
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>        
+    </body>
+</html>
