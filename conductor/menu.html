@@ -16,6 +16,17 @@
         <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
+        <script>
+            function mostrarElemento(id){
+                $("#"+id).show();
+            }
+            function ocultaElemento(id){
+                $("#"+id).hide();
+            }
+            function redirecciona(url){
+                location.href = url;
+            }
+        </script>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -54,12 +65,30 @@
                 </a>
             </div>
             <div class="col-xs-4">
-                <a href="../index.html" class="icon-menu">
+                <a onclick="mostrarElemento('alertaCierraSesion');" class="icon-menu">
                     <i class="fa fa-sign-out fa-3x" aria-hidden="true"></i>
                     <span>Cerrar Sesión</span>
                 </a>
             </div>
         </div>
+        </div>
+
+        <div id="alertaCierraSesion" style="display: none;">
+            <div class="alert-dialog-mask alert-dialog-mask--material"></div>
+            <div class="alert-dialog alert-dialog--material">
+              <div class="alert-dialog-container alert-dialog-container--material">
+                <div class="alert-dialog-title alert-dialog-title--material">Confirmacion</div>
+
+                <div class="alert-dialog-content alert-dialog-content--material">
+                  Seguro que quiere salir?
+                </div>
+
+                <div class="alert-dialog-footer alert-dialog-footer--material"><!-- alert-dialog-footer--rowfooter -->
+                  <button onclick="redirecciona('../index.html')" class="alert-dialog-button alert-dialog-button--material" style="background-color: #4cda64;color: white;">Si</button>
+                  <button onclick="ocultaElemento('alertaCierraSesion');" class="alert-dialog-button alert-dialog-button--primal alert-dialog-button--material" style="background-color: #eb482f; color: white;">No</button>
+                </div>
+              </div>
+            </div> 
         </div>
 
         <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        

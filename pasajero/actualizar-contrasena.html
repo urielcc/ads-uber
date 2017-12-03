@@ -12,8 +12,7 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="../plugins/onsenui/css/onsenui.css">
         <link rel="stylesheet" href="../plugins/onsenui/css/onsen-css-components.min.css">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
     </head>
@@ -24,41 +23,61 @@
 
         <!-- Add your site or application content here -->
         <div class="toolbar">
-            <div class="toolbar__left">
+          <div class="toolbar__left">
             <span class="toolbar-button">
-                <a href="configuraciones.html" style="text-decoration: none;color: #0076ff;">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i> Regresar
-                </a>
+              <a href="configuraciones.html" style="text-decoration: none;color: #0076ff;">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i> Regresar
+              </a>
             </span>
-            </div>
+          </div>
 
-            <div class="toolbar__center">Actualizar Contrasena</div>
+          <div class="toolbar__center" style="font-family: -apple-system,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif">
+            Cambiar Contraseña
+          </div>
+
+          
         </div>
-        <div style="margin-top: 10px; padding-left: 5%;">
-            <br />
-            <div style="float: left;">
-                <span class="toolbar-button" style="font-size: 22px">
-                  <i class="fa fa-asterisk" style="color:black;" aria-hidden="true"></i>
+
+
+        <div style="margin-top: 50px; padding-left: 5%;">
+       
+            <div style="float: left;"> 
+                <span class="toolbar-button" style="font-size: 27px">
+                  <i class="fa fa-asterisk" style="color:black; padding: 1px;" aria-hidden="true"></i>
                 </span>
             </div>
             <div>
-                <input class="text-input text-input--material" style="width:75%; padding-left: 2%;" placeholder="Contrasena" type="password" required>
+                <input class="text-input text-input--material" style="width:75%; padding-left: 2%; margin-top:10px;" placeholder="Contraseña Actual" type="text" required>
             </div>
+
             <br />
-            <div style="float: left;">
-                <span class="toolbar-button" style="font-size: 22px">
-                  <i class="fa fa-asterisk" style="color:black;" aria-hidden="true"></i>
+
+            <div style="float: left;"> 
+                <span class="toolbar-button" style="font-size: 27px">
+                  <i class="fa fa-asterisk" style="color:black; padding: 1px;" aria-hidden="true"></i>
                 </span>
             </div>
             <div>
-                <input class="text-input text-input--material" style="width:75%; padding-left: 2%;" placeholder="Confirmar Contrasena" type="password" required>
+                <input class="text-input text-input--material" style="width:75%; padding-left: 2%; margin-top:10px;" placeholder="Confirmar Contraseña Actual" type="text" required>
             </div>
-        </div>
-        <div style="margin-top: 30px; text-align: center ">
-            <a href="menu.html" class="button boton-login">Actualizar</a>
+
+            <br />
+
+            <div style="float: left;"> 
+                <span class="toolbar-button" style="font-size: 27px">
+                  <i class="fa fa-asterisk" style="color:black; padding: 1px;" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div>
+                <input class="text-input text-input--material" style="width:75%; padding-left: 2%; margin-top:10px;" placeholder="Nueva Contraseña" type="text" required>
+            </div>
+
+
         </div>
 
-        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
+        <a href="configuraciones.html" class="button--large--cta" style="width: 95%; margin: 100px auto;">Actualizar</a>
+
+        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="../js/vendor/jquery-3.2.1.min.js"></script>
 
         <script src="../js/plugins.js"></script>
