@@ -35,7 +35,7 @@
             <div class="toolbar__center">Viajes Reservados</div>
         </div>
 
-        <div style="height: 200px; padding: 1px 0 0 0;">
+        <!--<div style="height: 200px; padding: 1px 0 0 0;">
           <div class="card card--material">
             <div class="card__title card--material__title">Viaje Comienza en 15 min.</div>
             <div class="card__content card--material__content">
@@ -51,39 +51,135 @@
             </div>
           </div>
         </div>
+        -->
         <hr>
         <span style="margin:15px;">Viajes Planeados para mas tarde.</span>
+        
         <ul class="list">
-            <li class="list-item">
+            <li class="list-item" onclick="ocultar(this);">
                 <div class="list-item__center">
-                    <div class="list-item__title">Juan Perez</div>
-                    <div class="list-item__subtitle">Jueves, 18:00 <br>Donacion requerida: $20.00</div>
+                    <div class="list-item__title">
+                         UABC <br>Lunes 4 Diciembre, 18:00
+                    </div>
+                    <div class="list-item__subtitle" style="display: none;">
+                    <span class="toolbar-button" style="font-size: 22px">
+                          <i class="fa fa-user-circle-o" style="color:black;" aria-hidden="true"></i>
+                        </span> Juan Perez <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-car" style="color:black;" aria-hidden="true"></i>
+                    </span> Nissan Plateado <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-money" style="color:black;" aria-hidden="true"></i>
+                    </span>
+                    Donacion requerida: $20.00 <br>
+                    </div>
+                </div>
+                <div class="list-item__right">
+                  <div class="list-item__label">
+                  <button class="toolbar-button toolbar-button--outline" onclick="borrar(this);">
+                      Borrar
+                    </button>
+                  </div>
                 </div>
             </li>
-            <li class="list-item">
+
+            <li class="list-item" onclick="ocultar(this);">
                 <div class="list-item__center">
-                    <div class="list-item__title">Juan Perez</div>
-                    <div class="list-item__subtitle">Lunes, 18:00 <br>Donacion requerida: $20.00</div>
+                    <div class="list-item__title">
+                         UABC <br>Jueves 7 de Diciembre, 18:00
+                    </div>
+                    <div class="list-item__subtitle" style="display: none;">
+                    <span class="toolbar-button" style="font-size: 22px">
+                          <i class="fa fa-user-circle-o" style="color:black;" aria-hidden="true"></i>
+                        </span> Juan Perez <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-car" style="color:black;" aria-hidden="true"></i>
+                    </span> Nissan Plateado <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-money" style="color:black;" aria-hidden="true"></i>
+                    </span>
+                    Donacion requerida: $20.00 <br>
+                    </div>
+                </div>
+                <div class="list-item__right">
+                  <div class="list-item__label">
+                  <button class="toolbar-button toolbar-button--outline" onclick="borrar(this);">
+                      Borrar
+                    </button>
+                  </div>
                 </div>
             </li>
-            <li class="list-item">
+
+            <li class="list-item" onclick="ocultar(this);">
                 <div class="list-item__center">
-                    <div class="list-item__title">Juan Perez</div>
-                    <div class="list-item__subtitle">Martes, 19:00 <br>Donacion requerida: $20.00</div>
+                    <div class="list-item__title">
+                         Calle 5ta <br>Viernes 8 de Diciembre, 18:00
+                    </div>
+                    <div class="list-item__subtitle" style="display: none;">
+                    <span class="toolbar-button" style="font-size: 22px">
+                          <i class="fa fa-user-circle-o" style="color:black;" aria-hidden="true"></i>
+                        </span> Jose Lopez <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-car" style="color:black;" aria-hidden="true"></i>
+                    </span> Ford Azul <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-money" style="color:black;" aria-hidden="true"></i>
+                    </span>
+                    Donacion requerida: $20.00 <br>
+                    </div>
+                </div>
+                <div class="list-item__right">
+                  <div class="list-item__label">
+                  <button class="toolbar-button toolbar-button--outline" onclick="borrar(this);">
+                      Borrar
+                    </button>
+                  </div>
                 </div>
             </li>
-            <li class="list-item">
+
+            <li class="list-item" onclick="ocultar(this);">
                 <div class="list-item__center">
-                    <div class="list-item__title">Juan Perez</div>
-                    <div class="list-item__subtitle">Miercoles, 18:00 <br>Donacion requerida: $20.00</div>
+                    <div class="list-item__title">
+                         Plaza Rio <br>Sabado 9 de Diciembre, 18:00
+                    </div>
+                    <div class="list-item__subtitle" style="display: none;">
+                    <span class="toolbar-button" style="font-size: 22px">
+                          <i class="fa fa-user-circle-o" style="color:black;" aria-hidden="true"></i>
+                        </span> Juan Perez <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-car" style="color:black;" aria-hidden="true"></i>
+                    </span> Nissan Plateado <br>
+                    <span class="toolbar-button" style="font-size: 22px">
+                    <i class="fa fa-money" style="color:black;" aria-hidden="true"></i>
+                    </span>
+                    Donacion requerida: $20.00 <br>
+                    </div>
+                </div>
+                <div class="list-item__right">
+                  <div class="list-item__label">
+                  <button class="toolbar-button toolbar-button--outline" onclick="borrar(this);">
+                      Borrar
+                    </button>
+                  </div>
                 </div>
             </li>
+
         </ul>
 
         <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
         <script src="../js/vendor/jquery-3.2.1.min.js"></script>
 
         <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/main.js"></script> 
+        <script>
+            function ocultar(obj){
+                $(obj).children("div").children(".list-item__subtitle").toggle();
+            }
+
+            function borrar(obj){
+                $(obj).parent().parent().parent().toggle();
+            }
+
+        </script>       
     </body>
 </html>

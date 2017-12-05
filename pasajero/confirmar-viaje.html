@@ -28,23 +28,24 @@
           <div class="toolbar__center" style="font-family: -apple-system,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif">
             Confirma reservacion
           </div>
-
-          <div class="toolbar__right">
             
           </div>
         </div>
 
+        <div id="map-container" style="width:100%; height:100%;"></div>
+        
         <div id="confirm-msg">
-          <div class="action-sheet-mask"></div>
+          <!--<div class="action-sheet-mask"></div>-->
           <div class="action-sheet">
             <button class="action-sheet-button" onclick="window.location.href = 'menu.html';">Reservar Viaje</button>
             <button class="action-sheet-button" onclick="window.location.href = 'planear-ruta.html'">Regresar</button>
           </div>
         </div>
         <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
-        <script src="../js/vendor/jquery-3.2.1.min.js"></script>
-
+        <script src="../js/vendor/jquery-3.2.1.min.js"></script> 
+        <script src="../js/iniciar-viaje-pasajero.js"></script>
         <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="https://maps.google.com/maps/api/js?v=3.exp&libraries=places"></script>
+        <script src="../js/main.js"></script>              
     </body>
 </html>
