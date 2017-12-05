@@ -3,13 +3,10 @@ var directionsDisplay;
 var mapContext;
 var centroCalle2da;
 var centroCalle4ta;
-var markersArray = [];
 
 $(document).ready(function() { 	
 	centroCalle2da = new google.maps.LatLng(32.535327, -117.038329);
 	centroCalle4ta = new google.maps.LatLng(32.532626, -117.038845);
-	uabc = new google.maps.LatLng(32.531940, -116.966533);
-
 	directionsService = new google.maps.DirectionsService;
     directionsDisplay = new google.maps.DirectionsRenderer;
 
@@ -50,48 +47,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 	insertMarker("car", centroCalle4ta.lat(), centroCalle4ta.lng());
 }
 
-function loadUABC(){
-	goToUABC(directionsService, directionsDisplay);
-	$("#driver-info").hide();
-	$("#trip-info").show();
-	$("#trip-detail").show();
-}
-
-function goToUABC(directionsService, directionsDisplay) {
-	directionsService.route({
-	  origin: centroCalle4ta,
-	  destination: uabc,
-	  travelMode: 'DRIVING'
-	}, function(response, status) {
-	  if (status === 'OK') {
-	  	$("#confirm-msg").show();
-	    directionsDisplay.setDirections(response);
-	  } else {
-	    window.alert('Directions request failed due to ' + status);
-	  }
-	});
-	clearOverlays();
-	insertMarker("car", centroCalle4ta.lat(), centroCalle4ta.lng());
-	insertMarker("uabc", uabc.lat(), uabc.lng());
-	
-	window.setTimeout(function() {		
-		mapContext.setZoom(15);  	
-      	mapContext.panTo(centroCalle4ta);
-    }, 2000);
-}
-
-function finish(){		
-	window.setTimeout(function() {		
-		mapContext.setZoom(15);  	
-      	mapContext.panTo(uabc);      	
-    }, 1000);
-
-window.setTimeout(function() {		
-    $("#complete-trip").show();
-		$("#trip-detail").hide();
-	}, 2000);
-}
-
 function cancelRoute(){
 	directionsDisplay.setMap(null); // clear direction from the map
 	directionsDisplay.setPanel(null); // clear directionpanel from the map          
@@ -113,12 +68,7 @@ function insertMarker (type, lat, lng) {
       new google.maps.Size(60, 60)
     )
   });
-  markersArray.push(marker);
-}
 
-function clearOverlays() {
-  for (var i = 0; i < markersArray.length; i++ ) {  	
-    markersArray[i].setMap(null);
-  }
-  markersArray.length = 0;
+
+
 }

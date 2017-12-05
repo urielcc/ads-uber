@@ -36,22 +36,62 @@
     top: 52px;
     z-index: 999;
     width: 100%;">
-          <div class="card card--material">
-
-            <div class="card__title card--material__title"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Juan Perez</div>
+          <div class="card card--material" id="driver-info">
+            <div class="card__title card--material__title"><i class="fa fa-user-circle-o" aria-hidden="true" onclick="loadUABC()"></i> Juan Perez</div>
             <div class="card__content card--material__content">A 0.3 Km de tu ubicacion</div>
           </div>
+
+          <div class="card card--material" id="trip-info" style="display:none;">
+            <div class="card__title card--material__title"><i class="fa fa-map-marker" aria-hidden="true"></i> Destino: UABC</div>
+            <div class="card__content card--material__content">Tiempo transcurrido: 0 min</div>
+          </div>
+
         </div>
 
         <div id="map-container" style="width:100%; height:100%;"></div>
 
         <div id="confirm-msg">
           
-          <div class="action-sheet">
-            <button class="action-sheet-button" onclick="window.location.href = 'menu.html';">Tomar Viaje</button>
+          <div id="actions-map" class="action-sheet">
+            <button class="action-sheet-button" onclick="$('#actions-map').hide()">Tomar Viaje</button>
             <button class="action-sheet-button" onclick="window.location.href = 'iniciar-viaje.html'">Regresar</button>
           </div>
         </div>
+
+         <div style="position: absolute;
+    bottom: 10px;
+    z-index: 999;
+    width: 100%;">          
+
+          <div class="card card--material" id="trip-detail" style="display:none">
+            <div class="card__title card--material__title"><i class="fa fa-user-circle" aria-hidden="true" onclick="finish()"></i> <small>Conductor: Juan Perez</small>
+            </div>
+            <div class="card__content card--material__content">20 min aprox. para finalizar viaje</div>
+<div class="card__title card--material__title"><i class="fa fa-arrow-up" aria-hidden="true"></i> <small><b>Calle 4ta</b></small>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div id="complete-trip" style="display: none;">
+            <div class="alert-dialog-mask alert-dialog-mask--material"></div>
+            <div class="alert-dialog alert-dialog--material">
+              <div class="alert-dialog-container alert-dialog-container--material">
+                <div class="alert-dialog-title alert-dialog-title--material">Viaje Finalizado</div>
+
+                <div class="alert-dialog-content alert-dialog-content--material">
+                  ¿Cómo te pareció el viaje?
+                </div>
+
+                <div class="alert-dialog-footer alert-dialog-footer--material"><!-- alert-dialog-footer--rowfooter -->
+                  <button onclick="window.location.href = 'menu.html'" class="alert-dialog-button alert-dialog-button--material" style="background-color: #4cda64;color: white;">Satisfactorio</button>
+                  <button onclick="window.location.href = 'menu.html'" class="alert-dialog-button alert-dialog-button--primal alert-dialog-button--material" style="background-color: #eb482f; color: white;">Bueno</button>
+                </div>
+              </div>
+            </div> 
+        </div>
+
         <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
         <script src="../js/vendor/jquery-3.2.1.min.js"></script>
 
