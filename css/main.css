@@ -330,7 +330,8 @@ textarea {
 }
 
 .toolbar {
-    background-image: -webkit-linear-gradient(bottom,#d1be16,#d1be16 50%,transparent 50%);
+    /*background-image: -webkit-linear-gradient(bottom,#d1be16,#d1be16 50%,transparent 50%);*/
+    background-color: black;
 }
 
 .form-register{

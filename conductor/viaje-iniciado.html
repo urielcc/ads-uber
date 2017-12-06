@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="../plugins/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="../plugins/onsenui/css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <div class="toolbar">
+            <div class="toolbar__left">
+           
+            </div>
+
+            <div class="toolbar__center" style="color:white;">Iniciar Viaje</div>
+        </div>
+
+
+
+        <div id="map-container" style="width:100%; height:100%;"></div>
+
+        <div style="position: absolute;
+            bottom: 10px;
+            z-index: 999;
+            width: 100%;display: none;" id="pasajeros">
+          <div class="card card--material">
+            <div class="card__title card--material__title" id="tituloPasajero"></div>
+            <div class="card__content card--material__content">
+            <button onclick="ocultar()" class="button--large--cta" style="background-color: #4cda64;color: white;">Pasajero recogido</button>
+            <button onclick="ocultar()" class="button--large--cta" style="background-color: #eb482f; color: white;">Pasajero no llego</button>
+            </div>
+         </div>
+        </div>
+        <div id="confirm-msg">
+          
+          <div id="actions-map" class="action-sheet">
+            <button class="action-sheet-button" onclick="mostrarPasajeros();">Iniciar Viaje</button>
+            <button class="action-sheet-button" onclick="window.location.href = 'iniciar-seleccionar-ruta.html'">Regresar</button>
+          </div>
+        </div>
+
+        <div style="position: absolute;
+            z-index: 999;
+            width: 100%;top: 10%;display: none" id="finalizacion">
+          <div class="card card--material">
+            <ul class="list list--material">
+              <li class="list-header list-header--material">
+                Confirmar Donativos
+              </li>
+              <li class="list-item list-item--material" id="pasajero1">
+                <div class="list-item__center list-item--material__center">
+                  <div class="list-item__title list-item--material__title"><i class='fa fa-user-circle-o' aria-hidden='true'></i> Jose Lopez</div>
+                  <div class="list-item__subtitle list-item--material__subtitle">
+                      <button onclick="$('#pasajero1').hide();" class="button--large--cta" style="background-color: #4cda64;color: white;">Si</button>
+                    <button onclick="$('#pasajero1').hide();" class="button--large--cta" style="background-color: #eb482f; color: white;">No</button>
+                  </div>
+                </div>
+              </li>
+              <li class="list-item list-item--material" id="pasajero2">
+                <div class="list-item__center list-item--material__center">
+                  <div class="list-item__title list-item--material__title"><i class='fa fa-user-circle-o' aria-hidden='true'></i> Jaime Guzman</div>
+                  <div class="list-item__subtitle list-item--material__subtitle">
+                      <button onclick="$('#pasajero2').hide();" class="button--large--cta" style="background-color: #4cda64;color: white;">Si</button>
+                    <button  onclick="$('#pasajero2').hide();" class="button--large--cta" style="background-color: #eb482f; color: white;">No</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button onclick="window.location = 'menu.html'" class="button--large--cta" style="background-color: #4cda64; color: white;">Finalizar</button>
+          </div>
+        </div>
+         
+
+        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>        
+        <script src="../js/vendor/jquery-3.2.1.min.js"></script>
+
+        <script src="../js/iniciar-viaje-conductor.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="https://maps.google.com/maps/api/js?v=3.exp&libraries=places"></script>
+        <script src="../js/main.js"></script>  
+        <script> 
+            function mostrarPasajeros(){
+                $('#actions-map').hide();
+                //$('#pasajeros').show();
+            }
+        </script>      
+    </body>
+</html>

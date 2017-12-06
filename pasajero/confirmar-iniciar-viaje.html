@@ -29,7 +29,7 @@
            
             </div>
 
-            <div class="toolbar__center">Iniciar Viaje</div>
+            <div class="toolbar__center" style="color:white;">Iniciar Viaje</div>
         </div>
 
         <div style="position: absolute;
@@ -38,12 +38,12 @@
     width: 100%;">
           <div class="card card--material" id="driver-info">
             <div class="card__title card--material__title"><i class="fa fa-user-circle-o" aria-hidden="true" onclick="loadUABC()"></i> Juan Perez</div>
-            <div class="card__content card--material__content">A 0.3 Km de tu ubicacion</div>
+            <div class="card__content card--material__content distancia"></div>
           </div>
 
           <div class="card card--material" id="trip-info" style="display:none;">
             <div class="card__title card--material__title"><i class="fa fa-map-marker" aria-hidden="true"></i> Destino: UABC</div>
-            <div class="card__content card--material__content">Tiempo transcurrido: 0 min</div>
+            <div class="card__content card--material__content distancia"></div>
           </div>
 
         </div>
@@ -66,7 +66,7 @@
           <div class="card card--material" id="trip-detail" style="display:none">
             <div class="card__title card--material__title"><i class="fa fa-user-circle" aria-hidden="true" onclick="finish()"></i> <small>Conductor: Juan Perez</small>
             </div>
-            <div class="card__content card--material__content">20 min aprox. para finalizar viaje</div>
+            <div class="card__content card--material__content" id="cajatexto"></div>
 <div class="card__title card--material__title"><i class="fa fa-arrow-up" aria-hidden="true"></i> <small><b>Calle 4ta</b></small>
             </div>
 
@@ -86,7 +86,7 @@
 
                 <div class="alert-dialog-footer alert-dialog-footer--material"><!-- alert-dialog-footer--rowfooter -->
                   <button onclick="window.location.href = 'menu.html'" class="alert-dialog-button alert-dialog-button--material" style="background-color: #4cda64;color: white;">Satisfactorio</button>
-                  <button onclick="window.location.href = 'menu.html'" class="alert-dialog-button alert-dialog-button--primal alert-dialog-button--material" style="background-color: #eb482f; color: white;">Bueno</button>
+                  <button onclick="window.location.href = 'menu.html'" class="alert-dialog-button alert-dialog-button--primal alert-dialog-button--material" style="background-color: #eb482f; color: white;">Malo</button>
                 </div>
               </div>
             </div> 

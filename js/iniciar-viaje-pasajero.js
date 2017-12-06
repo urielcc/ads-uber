@@ -46,8 +46,8 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 	  }
 	});
 	
-	insertMarker("man", centroCalle2da.lat(), centroCalle2da.lng());
-	insertMarker("car", centroCalle4ta.lat(), centroCalle4ta.lng());
+	insertMarker("man", centroCalle2da.lat(), centroCalle2da.lng(),false);
+	insertMarker("car", centroCalle4ta.lat(), centroCalle4ta.lng(),true,centroCalle2da,true);
 }
 
 function loadUABC(){
@@ -71,9 +71,9 @@ function goToUABC(directionsService, directionsDisplay) {
 	  }
 	});
 	clearOverlays();
-	insertMarker("car", centroCalle4ta.lat(), centroCalle4ta.lng());
-	insertMarker("uabc", uabc.lat(), uabc.lng());
-	
+	insertMarker("car", centroCalle4ta.lat(), centroCalle4ta.lng(),true,uabc,false);
+	insertMarker("uabc", uabc.lat(), uabc.lng(),false);
+
 	window.setTimeout(function() {		
 		mapContext.setZoom(15);  	
       	mapContext.panTo(centroCalle4ta);
@@ -101,9 +101,10 @@ function cancelRoute(){
 	document.getElementById("map-suggest").value= "";
 }
 
-function insertMarker (type, lat, lng) {
+function insertMarker (type, lat, lng,drag,destino,recogerPasajero) {
   var marker = new google.maps.Marker({
     map: mapContext,
+    draggable: drag,
     position: new google.maps.LatLng(lat, lng),
     icon : new google.maps.MarkerImage(
       '../js/assets/'+type+'.png',
@@ -114,6 +115,44 @@ function insertMarker (type, lat, lng) {
     )
   });
   markersArray.push(marker);
+
+
+  //simulacion carro moviendo
+  google.maps.event.addListener(marker,"dragend",function(){
+		latlng = new google.maps.LatLng(marker.getPosition().lat(), marker.getPosition().lng());
+		var distancia = google.maps.geometry.spherical.computeDistanceBetween(destino,latlng);
+		$(".distancia").text("A " + Math.round(distancia)/1000 + " Km. aprox");
+		if(distancia < 50){
+			if(recogerPasajero==true){
+				$(".distancia").text(" ");
+				loadUABC();
+			}else{finish();}
+		}
+
+		directionsService.route({
+		  origin: latlng,
+		  destination: destino,
+		  travelMode: google.maps.TravelMode.DRIVING
+		}, function(response, status) {
+		  if (status === google.maps.DirectionsStatus.OK) {
+		    
+		    // Get first route duration
+		    var route = response.routes[0];
+		    var duration = 0;
+		    
+		    route.legs.forEach(function (leg) {
+		    	// The leg duration in seconds.
+		    	duration += leg.duration.value;
+		    });
+		    
+		    //directionsDisplay.setDirections(response);
+		    //console.log(Math.round(duration/60));
+		    $("#cajatexto").text("A "+(Math.round(duration)/60).toFixed(0)+" min");
+		  } else {
+		    window.alert('Directions request failed due to ' + status);
+		  }
+		});
+	});
 }
 
 function clearOverlays() {
