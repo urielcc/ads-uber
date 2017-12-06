@@ -30,7 +30,8 @@
                 </span>
             </div>
             <div>
-                <input class="text-input text-input--material" style="width:75%; padding-left: 2%; " placeholder="Nombre" type="text" required>
+                <input class="text-input text-input--material" id="nombre" style="width:75%; padding-left: 2%; " placeholder="Nombre" type="text" required>
+                <br/><span id="spanNombre"></span>
             </div>
             <br />
             <div style="float: left;"> 
@@ -39,7 +40,8 @@
                 </span>
             </div>
             <div>
-                <input class="text-input text-input--material" style="width:75%; padding-left: 2%; " placeholder="Correo Electronico" type="text" required>
+                <input class="text-input text-input--material" id="correo" style="width:75%; padding-left: 2%; " placeholder="Correo Electronico" type="text" required>
+                <br/><span id="spanCorreo"></span>
             </div>
             <br />
             <div style="float: left;">
@@ -48,7 +50,9 @@
                 </span>
             </div>
             <div>
-                <input class="text-input text-input--material" style="width:75%; padding-left: 2%;" placeholder="Contrasena" type="password" required>
+                <input class="text-input text-input--material" id="password" style="width:75%; padding-left: 2%;" placeholder="Contrasena" type="password" required>
+                <br/>
+                <span id="spanPassword"></span>
             </div>
             <br />
             <div style="float: left;">
@@ -57,7 +61,8 @@
                 </span>
             </div>
             <div>
-                <input class="text-input text-input--material" style="width:75%; padding-left: 2%;" placeholder="Confirmar Contrasena" type="password" required>
+                <input class="text-input text-input--material" id="cpassword" style="width:75%; padding-left: 2%;" placeholder="Confirmar Contrasena" type="password" required>
+                <br/><span id="spanCPassword"></span>
             </div>
             <br />
             <div style="float: left;">
@@ -66,7 +71,8 @@
                 </span>
             </div>
             <div>
-                <input class="text-input text-input--material" style="width:75%; padding-left: 2%;" placeholder="Numero de Telefono" type="number" required>
+                <input class="text-input text-input--material" id="telefono" style="width:75%; padding-left: 2%;" placeholder="Numero de Telefono" type="number" required>
+                <br/><span id="spanTelefono"></span>
             </div>
         </div>
         <a href="login.html" class="button--large--cta" style="width: 95%; margin: 10px auto;">Registrar</a>
@@ -76,6 +82,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 
         <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/main.js"></script>
+        <script src="../js/validaciones.js"></script>        
     </body>
 </html>

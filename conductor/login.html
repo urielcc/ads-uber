@@ -38,12 +38,15 @@
          <div class="login-form">
 
             <div class="container form-register">
-        <input type="email" class="text-input--underbar" placeholder="Correo Electrónico" value="">
+        <input type="email" class="text-input--underbar" placeholder="Correo Electrónico" id="correologin" value="">
+        <br/><span id="spanCorrelogin"></span>
         <br>
-        <input type="password" class="text-input--underbar" placeholder="Contraseña" value="">
+        <input type="password" class="text-input--underbar" placeholder="Contraseña" id="passwordlogin" value="">
+        <br/><span id="spanPasswordlogin"></span>
         </div>
+        
         <br><br>
-        <a href="menu.html" class="button--large--cta" style="width: 95%; margin: 0 auto;">Ingresar</a>
+        <a onclick="verifica();" class="button--large--cta" style="width: 95%; margin: 0 auto;">Ingresar</a>
         <br><br>
         <a href="registro.html" class="button--large--quiet" style="width: 95%; margin: 0 auto;">¿No tienes cuenta? Registrate</a>
         </div>
@@ -53,6 +56,20 @@
         <script src="../js/vendor/jquery-3.2.1.min.js"></script>
 
         <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/main.js"></script>  
+        <script>
+            function verifica(){
+                if($("#correologin").val() == "correo@dominio.com"){
+                    $("#spanCorrelogin").html("<span style='color:red;'></span>");
+                    if($("#passwordlogin").val()=="123456"){
+                        window.location = "menu.html"
+                    }else{
+                        $("#spanPasswordlogin").html("<span style='color:red;'>* Contrasena incorrecta</span>");
+                    }
+                }else{
+                    $("#spanCorrelogin").html("<span style='color:red;'>* Correo no encontrado</span>");
+                }
+            }
+        </script>      
     </body>
 </html>
